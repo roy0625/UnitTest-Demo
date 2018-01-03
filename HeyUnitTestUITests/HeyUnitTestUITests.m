@@ -36,21 +36,21 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    XCUIElementQuery *weightKgElementsQuery = [app.otherElements containingType:XCUIElementTypeStaticText identifier:@"Weight (Kg)"];
-    XCUIElement *textField = [[weightKgElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:0];
-    [textField tap];
-    [textField typeText:@"80"];
-    
-    XCUIElement *textField2 = [[weightKgElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:1];
-    [textField2 tap];
-    
-    XCUIElement *moreKey = app/*@START_MENU_TOKEN@*/.keys[@"more"]/*[[".keyboards",".keys[@\"more, numbers\"]",".keys[@\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/;
-    [moreKey tap];
-    [moreKey tap];
-    [textField2 typeText:@"180"];
-    [app.buttons[@"Calculate BMI"] tap];
-    [[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element tap];
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    XCUIElementQuery *weightKgElementsQuery = [app.otherElements containingType:XCUIElementTypeStaticText identifier:@"Weight (Kg)"];
+//    XCUIElement *textField = [[weightKgElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:0];
+//    [textField tap];
+//    [textField typeText:@"80"];
+//    
+//    XCUIElement *textField2 = [[weightKgElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:1];
+//    [textField2 tap];
+//    
+//    XCUIElement *moreKey = app/*@START_MENU_TOKEN@*/.keys[@"more"]/*[[".keyboards",".keys[@\"more, numbers\"]",".keys[@\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/;
+//    [moreKey tap];
+//    [moreKey tap];
+//    [textField2 typeText:@"180"];
+//    [app.buttons[@"Calculate BMI"] tap];
+//    [[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element tap];
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 

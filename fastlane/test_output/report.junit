@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='HeyUnitTestUITests.xctest' tests='5' failures='0'>
+  <testsuite name='HeyUnitTestTests' tests='4' failures='0'>
+    <testcase classname='HeyUnitTestTests' name='testAddNumber' time='0.003'/>
+    <testcase classname='HeyUnitTestTests' name='testCalculateBMI' time='0.001'/>
+    <testcase classname='HeyUnitTestTests' name='testExample' time='0.002'/>
+    <testcase classname='HeyUnitTestTests' name='testPerformanceExample' time='1.071'/>
+  </testsuite>
+  <testsuite name='HeyUnitTestUITests' tests='1' failures='0'>
+    <testcase classname='HeyUnitTestUITests' name='testExample' time='5.860'/>
+  </testsuite>
+</testsuites>

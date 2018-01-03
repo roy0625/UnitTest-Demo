@@ -24,13 +24,17 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    run_tests
+    scan
+    # run_tests
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
     # sync_code_signing(type: "appstore") # more information: https://codesigning.guide
+    # increment_build_number  # auto increment build number
+    get_certificates           # invokes cert
+    get_provisioning_profile   # invokes sigh
     build_app(scheme: "HeyUnitTest") # more options available
     upload_to_testflight
 
