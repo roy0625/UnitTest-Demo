@@ -22,7 +22,7 @@ xcode-select --install
 ```
 fastlane ios test
 ```
-Runs all the tests
+Runs Unit tests and UI tests
 ### ios beta
 ```
 fastlane ios beta
@@ -30,6 +30,11 @@ fastlane ios beta
 Submit a new Beta Build to Apple TestFlight
 
 This will also make sure the profile is up to date
+### ios build
+```
+fastlane ios build
+```
+Build a new .ipa
 ### ios release
 ```
 fastlane ios release

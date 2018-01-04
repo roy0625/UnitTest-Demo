@@ -45,8 +45,8 @@ platform :ios do
   desc "Build a new .ipa"
   lane :build do
     # sync_code_signing(type: "appstore") # more information: https://codesigning.guide
-    # get_certificates           # invokes cert
-    # get_provisioning_profile   # invokes sigh
+    get_certificates           # invokes cert
+    get_provisioning_profile   # invokes sigh
     build_app(scheme: "HeyUnitTest") # more options available
 
     # sh "your_script.sh"
