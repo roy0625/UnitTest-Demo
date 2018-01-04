@@ -22,10 +22,9 @@ platform :ios do
     # cocoapods
   end
 
-  desc "Runs all the tests"
+  desc "Runs Unit tests and UI tests"
   lane :test do
     scan
-    # run_tests
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -37,6 +36,18 @@ platform :ios do
     get_provisioning_profile   # invokes sigh
     build_app(scheme: "HeyUnitTest") # more options available
     upload_to_testflight
+    slack(message: "Successfully distributed a new beta build")
+
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+
+  desc "Build a new .ipa"
+  lane :build do
+    # sync_code_signing(type: "appstore") # more information: https://codesigning.guide
+    # get_certificates           # invokes cert
+    # get_provisioning_profile   # invokes sigh
+    build_app(scheme: "HeyUnitTest") # more options available
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
