@@ -36,7 +36,7 @@ platform :ios do
     get_provisioning_profile   # invokes sigh
     build_app(scheme: "HeyUnitTest") # more options available
     upload_to_testflight
-    slack(message: "Successfully distributed a new beta build")
+    # slack(message: "Successfully distributed a new beta build")
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
@@ -44,17 +44,17 @@ platform :ios do
 
   desc "Build a new .ipa"
   lane :build do
-    # get_certificates           # invokes cert
-    # get_provisioning_profile   # invokes sigh
-    # build_app(scheme: "HeyUnitTest") # more options available
-    build_app(
-      export_method: "app-store",
-      export_options: {
-        provisioningProfiles: { 
-          "com.roy.HelloTestJenkins" => "HeyUnitTestProvisioningProfile"
-        }
-      }
-    )
+    get_certificates           # invokes cert
+    get_provisioning_profile   # invokes sigh
+    build_app(scheme: "HeyUnitTest") # more options available
+    # build_app(
+    #   export_method: "app-store",
+    #   export_options: {
+    #     provisioningProfiles: { 
+    #       "com.roy.HelloTestJenkins" => "HeyUnitTestProvisioningProfile"
+    #     }
+    #   }
+    # )
   end
 
   desc "Deploy a new version to the App Store"
