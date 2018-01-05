@@ -14,9 +14,10 @@ pipeline {
          //githubNotify account: env.GITHUB_ORG, context: 'build', credentialsId: 'githubvjbot', description: 'pending...', gitApiUrl: '', repo: env.GITHUB_REPO, sha: env.GIT_COMMIT, status: 'PENDING', targetUrl: ''
          //githubNotify account: env.GITHUB_ORG, context: 'lint', credentialsId: 'githubvjbot', description: 'pending...', gitApiUrl: '', repo: env.GITHUB_REPO, sha: env.GIT_COMMIT, status: 'PENDING', targetUrl: ''
          //githubNotify account: env.GITHUB_ORG, context: 'report', credentialsId: 'githubvjbot', description: 'pending...', gitApiUrl: '', repo: env.GITHUB_REPO, sha: env.GIT_COMMIT, status: 'PENDING', targetUrl: ''
-       }
-     }
-   }
+        }
+      }
+    }
+  }
 
    stage('Test') {
       steps {
