@@ -7,6 +7,7 @@ pipeline {
   }
 
   stages {
+    
   	stage('Preparing') {
      steps {
        script {
@@ -17,9 +18,8 @@ pipeline {
         }
       }
     }
-  }
-
-   stage('Test') {
+  
+    stage('Test') {
       steps {
         script {
           try {
