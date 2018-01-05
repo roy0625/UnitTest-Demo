@@ -40,6 +40,11 @@ Build a new .ipa
 fastlane ios release
 ```
 Deploy a new version to the App Store
+### ios slack
+```
+fastlane ios slack
+```
+Test slack
 
 ----
 
