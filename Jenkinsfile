@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      args 'LANG=en_US.UTF-8'
-      image 'ruby:2.4.0'
-      
-    }
-  }
+  agent any
 
   environment {
     GITHUB_ORG = 'virtualjoy'
