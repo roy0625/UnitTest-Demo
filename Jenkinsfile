@@ -30,7 +30,7 @@ pipeline {
         script {
           try {
             //githubNotify account: env.GITHUB_ORG, context: 'build', credentialsId: 'githubvjbot', description: 'building...', gitApiUrl: '', repo: env.GITHUB_REPO, sha: env.GIT_COMMIT, status: 'PENDING', targetUrl: ''
-            sh 'gem fastlane install'
+            sh 'gem install fastlane'
             sh 'fastlane test'
             //githubNotify account: env.GITHUB_ORG, context: 'build', credentialsId: 'githubvjbot', description: 'build successfully', gitApiUrl: '', repo: env.GITHUB_REPO, sha: env.GIT_COMMIT, status: 'SUCCESS', targetUrl: ''
           }
